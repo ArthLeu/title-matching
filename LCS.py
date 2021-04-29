@@ -6,7 +6,7 @@ def LongestCommonSubstring(document, phrase):
     ''' input: document (str), phrase to match (str); output: longest matching substring '''
     m = len(document) + 1 # add 1 because the first row/col is for when substring length is 0
     n = len(phrase) + 1
-    T = np.zeros([m, n])
+    T = np.zeros([m, n]) # DP table
     maxlen = 0
     argmaxstr = ""
 
