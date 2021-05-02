@@ -6,11 +6,9 @@ Last modified 05/02/2021
 
 
 #### Project Descriptions
-Kaggle Competition Page
-https://www.kaggle.com/c/coleridgeinitiative-show-us-the-data
+[Kaggle Competition Main Page](https://www.kaggle.com/c/coleridgeinitiative-show-us-the-data)
 
-Program output guide and sample
-https://www.kaggle.com/c/coleridgeinitiative-show-us-the-data/overview/evaluation
+[Program output guide and sample](https://www.kaggle.com/c/coleridgeinitiative-show-us-the-data/overview/evaluation)
 
 
 Running the program:
