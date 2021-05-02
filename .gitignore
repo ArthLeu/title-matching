@@ -131,3 +131,7 @@ dmypy.json
 
 # cache file
 *~
+
+
+dataset/*
+!dataset
