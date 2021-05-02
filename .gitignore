@@ -133,5 +133,7 @@ dmypy.json
 *~
 
 
-dataset/*
-!dataset
+dataset/train/*
+dataset/test/*
+!dataset/train
+!dataset/test
