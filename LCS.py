@@ -1,7 +1,6 @@
 import time
 import numpy as np
 
-
 def LongestCommonSubstring(document, phrase):
     ''' input: document (str), phrase to match (str); output: longest matching substring '''
     m = len(document) + 1 # add 1 because the first row/col is for when substring length is 0
@@ -25,7 +24,7 @@ def LongestCommonSubstring(document, phrase):
     # finalize results
     print("longest substring:", argmaxstr)
     print("length:", maxlen)
-    
+
     return (argmaxstr, maxlen)
 
 
@@ -34,4 +33,3 @@ if __name__ == "__main__":
     print(localtime)
 
     LongestCommonSubstring("abcdefg", "cdea")
-    
