@@ -22,8 +22,8 @@ def LongestCommonSubstring(document, phrase):
                 argmaxstr = phrase[j-maxlen:j]
 
     # finalize results
-    print("longest substring:", argmaxstr)
-    print("length:", maxlen)
+    #print("longest substring:", argmaxstr)
+    #print("length:", maxlen)
 
     return (argmaxstr, maxlen)
 

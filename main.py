@@ -1,41 +1,76 @@
 import os
 import numpy
-import matplotlib.pyplot as plt
-
-import LCS
+#import matplotlib.pyplot as plt
 import json
 import time
 
+import LCS
 
+
+# Global Variables
+DATASET_LABEL = "NOAA" # temporary: single exact match
+print("Searching dataset label:", DATASET_LABEL)
+LMKS = [i for i in range(101) if i % 5 == 0] # landmarks for printing progress
+DATA_LIMIT = 1000
+
+
+def print_progress(i, total):
+    global LMKS 
+    percent = round(i/total*100)
+    
+    if LMKS != [] and percent == LMKS[0]:
+        print("%d%% completed"%percent)
+        LMKS.pop(0)
+
+        
 def main():
     ''' this is the main function '''
-    dict = {}
-    # PART 01: preprocess the documents
-<<<<<<< HEAD
+
+    PredictionDict = {}
+    begintime = time.time()
     
-=======
-    file = open('0a2c7004-f763-4846-b95f-1fdf537f8a04.json', 'r')
-    doc = json.load(file)
+    # PART 01: preprocess the documents
+    
+    train_data_path = "dataset/train/"
+    train_list = os.listdir(train_data_path)
+    train_list = train_list[:DATA_LIMIT] # TEMP
+    total_train_count = len(train_list)
 
-    beginning = time.time()
+    for i, filepath in enumerate(train_list):
+        print_progress(i, total_train_count)
+        
+        file = open(train_data_path + filepath, 'r')
+        id = filepath.split(".")[0]
+        doc = json.load(file)
 
-    for section in doc:
-        section_body = section['text']
-        matching_string = LCS.LongestCommonSubstring(section_body, '2010')
-        if matching_string not in dict:
-            dict['0a2c7004-f763-4846-b95f-1fdf537f8a04'] = matching_string[0]
-
-        print(dict)
-    endtime = time.time()
-    print(endtime-beginning)
->>>>>>> e3f25d3b6f3d1750f1de554affa79dda5f9d733f
 
     # PART 02: run matching algorithms in each document
     
+        for section in doc:
+            section_text = section['text']
+            matching_string = LCS.LongestCommonSubstring(section_text, DATASET_LABEL)[0]
+            
+            if matching_string not in PredictionDict and matching_string == DATASET_LABEL: # == for exact match
+                PredictionDict[id] = matching_string
 
     # PART 03: output statistics
+    
+    endtime = time.time()
+    print("\nTotal: %.2f seconds"%(endtime - begintime))
+    
 
-    pass
+    #TEMPORARY TEST SCRIPTS
+    test_keys = PredictionDict.keys()
+    print("Searched %d documents."%total_train_count)
+    print("Found keys in %d documents, showing first 10.\n"%len(test_keys))
+    print("Id, PredicitonString")
+    for i in range(min([10, len(test_keys)])):
+        k = list(test_keys)[i]
+        print("%s, %s"%(k, PredictionDict[k]))
+
+
+    return 0
+
 
 
 if __name__ == "__main__":
