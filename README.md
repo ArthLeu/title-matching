@@ -10,6 +10,9 @@ Last modified 05/03/2021
 3. Allow approximate search (rough match) (neural network may be required)
 4. Optimization on computing time (modern IR methods or term indexing maybe?)
 
+## Brainstorming Canvas
+[Link to Google Docs](https://docs.google.com/document/d/1zjpbcx4N6viEDxbHI9Jovx2x2zH4h5xOCiHbn1oLfGM/edit)
+
 
 ## Project Descriptions
 [Kaggle competition main page](https://www.kaggle.com/c/coleridgeinitiative-show-us-the-data)
