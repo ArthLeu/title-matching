@@ -1,11 +1,13 @@
 import time
 import numpy as np
+from numba import jit
 
+@jit
 def LongestCommonSubstring(document, phrase):
     ''' input: document (str), phrase to match (str); output: longest matching substring '''
     m = len(document) + 1 # add 1 because the first row/col is for when substring length is 0
     n = len(phrase) + 1
-    T = np.zeros([m, n]) # DP table
+    T = np.zeros((m, n)) # DP table. (m, n) is a tuple for Numba
     maxlen = 0
     argmaxstr = ""
 
@@ -32,4 +34,5 @@ if __name__ == "__main__":
     localtime = time.asctime(time.localtime(time.time()))
     print(localtime)
 
-    LongestCommonSubstring("abcdefg", "cdea")
+    res = LongestCommonSubstring("abcdefg", "cdea")
+    print("common string \"%s\" of length %d"%res)
