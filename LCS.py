@@ -2,7 +2,7 @@ import time
 import numpy as np
 from numba import jit
 
-@jit
+@jit # numba compilation decorator
 def LongestCommonSubstring(document, phrase):
     ''' input: document (str), phrase to match (str); output: longest matching substring '''
     m = len(document) + 1 # add 1 because the first row/col is for when substring length is 0
@@ -20,12 +20,12 @@ def LongestCommonSubstring(document, phrase):
 
             T[i, j] = localoptima
 
-            # update record
+            # Update record
             if localoptima > maxlen:
                 maxlen = int(localoptima)
                 argmaxstr = phrase[j-maxlen:j]
 
-    # finalize results
+    # Finalize results
     return (argmaxstr, maxlen)
 
 

@@ -29,11 +29,11 @@ def main():
     PredictionDict = {}
     begintime = time.time()
     
-    # PART 01: preprocess the documents
+    # PART 01: Preprocess the documents
     
     train_data_path = "dataset/train/"
     train_list = os.listdir(train_data_path)
-    train_list = train_list[:DATA_LIMIT] # TEMP
+    #train_list = train_list[:DATA_LIMIT] # TEMP
     total_train_count = len(train_list)
 
     for i, filepath in enumerate(train_list):
@@ -44,16 +44,22 @@ def main():
         doc = json.load(file)
 
 
-    # PART 02: run matching algorithms in each document
+    # PART 02: Run matching algorithms in each document
     
         for section in doc:
             section_text = section['text']
+
+            # TODO: Matching algorithms below
+
+            #matching_string = DATASET_LABEL if DATASET_LABEL in section_text else "None"  # Hack for exact match (using this instead can humiliate me)
             matching_string = LCS.LongestCommonSubstring(section_text, DATASET_LABEL)[0]
             
             if matching_string not in PredictionDict and matching_string == DATASET_LABEL: # == for exact match
                 PredictionDict[id] = matching_string
 
-    # PART 03: output statistics
+            # Matching algorithm ends here
+
+    # PART 03: Output statistics
     
     endtime = time.time()
     print("\nTotal: %.2f seconds"%(endtime - begintime))
