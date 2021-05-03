@@ -13,20 +13,19 @@ def LongestCommonSubstring(document, phrase):
 
     for i in range(1, m):
         for j in range(1, n):
+            
+            localoptima = 0
             if document[i-1] == phrase[j-1]: # subtract 1 because the index of doc/phrase is still 0-based
-                T[i, j] = T[i-1, j-1] + 1
-            else:
-                T[i, j] = 0
+                localoptima = T[i-1, j-1] + 1
+
+            T[i, j] = localoptima
 
             # update record
-            if T[i, j] > maxlen:
-                maxlen = int(T[i, j])
+            if localoptima > maxlen:
+                maxlen = int(localoptima)
                 argmaxstr = phrase[j-maxlen:j]
 
     # finalize results
-    #print("longest substring:", argmaxstr)
-    #print("length:", maxlen)
-
     return (argmaxstr, maxlen)
 
 
