@@ -2,7 +2,7 @@ import time
 import numpy as np
 from numba import jit
 
-@jit # numba compilation decorator
+@jit # Numba compilation decorator
 def LongestCommonSubstring(document, phrase):
     ''' input: document (str), phrase to match (str); output: longest matching substring '''
     m = len(document) + 1 # add 1 because the first row/col is for when substring length is 0

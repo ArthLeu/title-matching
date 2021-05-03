@@ -8,10 +8,10 @@ import LCS
 
 
 # Global Variables
-DATASET_LABEL = "NOAA" # temporary: single exact match
+DATASET_LABEL = "NOAA" # TEMP: single exact match
 print("Searching dataset label:", DATASET_LABEL)
 LMKS = [i for i in range(101) if i % 5 == 0] # landmarks for printing progress
-DATA_LIMIT = 5000
+DATA_LIMIT = 1000
 
 
 def print_progress(i, total):
@@ -33,7 +33,7 @@ def main():
     
     train_data_path = "dataset/train/"
     train_list = os.listdir(train_data_path)
-    #train_list = train_list[:DATA_LIMIT] # TEMP
+    train_list = train_list[:DATA_LIMIT] # TEMP
     total_train_count = len(train_list)
 
     for i, filepath in enumerate(train_list):
@@ -65,7 +65,7 @@ def main():
     print("\nTotal: %.2f seconds"%(endtime - begintime))
     
 
-    #TEMPORARY TEST SCRIPTS
+    # TEMP: TEST SCRIPTS
     test_keys = PredictionDict.keys()
     print("Searched %d documents."%total_train_count)
     print("Found keys in %d documents, showing first 10.\n"%len(test_keys))
