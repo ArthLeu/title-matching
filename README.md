@@ -2,7 +2,7 @@
 
 A project by Anthony Liu and Alex Salman
 
-Last modified 05/02/2021
+Last modified 05/03/2021
 
 ## TODO:
 1. Enable searching with multiple labels (exact match)
