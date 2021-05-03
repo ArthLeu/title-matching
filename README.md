@@ -25,17 +25,19 @@ Installing required packages
 pip3 install -r requirements.txt
 ```
 
+Store train data at location:
+``` bash
+dataset/train/
+```
+
+Store test data at location:
+``` bash
+dataset/test/
+```
+
 Running the program:
 ``` bash
 python3 main.py
 ```
 
-Train data location:
-``` bash
-dataset/train/
-```
 
-Test data location:
-``` bash
-dataset/test/
-```
