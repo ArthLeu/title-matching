@@ -18,6 +18,11 @@ Last modified 05/02/2021
 
 
 ## Useful Scripts
+Installing required packages
+``` bash
+pip3 install -r requirements.txt
+```
+
 Running the program:
 ``` bash
 python3 main.py
