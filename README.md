@@ -12,7 +12,9 @@ Last modified 05/02/2021
 
 
 ## Project Descriptions
-[Kaggle Competition Main Page](https://www.kaggle.com/c/coleridgeinitiative-show-us-the-data)
+[Kaggle competition main page](https://www.kaggle.com/c/coleridgeinitiative-show-us-the-data)
+
+[Dataset download page](https://www.kaggle.com/c/coleridgeinitiative-show-us-the-data/data)
 
 [Program output guide and sample](https://www.kaggle.com/c/coleridgeinitiative-show-us-the-data/overview/evaluation)
 
