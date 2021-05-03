@@ -11,7 +11,7 @@ import LCS
 DATASET_LABEL = "NOAA" # temporary: single exact match
 print("Searching dataset label:", DATASET_LABEL)
 LMKS = [i for i in range(101) if i % 5 == 0] # landmarks for printing progress
-DATA_LIMIT = 1000
+DATA_LIMIT = 5000
 
 
 def print_progress(i, total):
@@ -40,7 +40,7 @@ def main():
         print_progress(i, total_train_count)
         
         file = open(train_data_path + filepath, 'r')
-        id = filepath.split(".")[0]
+        id = filepath.split(".")[0] # remove .json filename extension
         doc = json.load(file)
 
 
