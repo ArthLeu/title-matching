@@ -1,6 +1,6 @@
 # Title Matcher
 
-A project by Anthony Liu and Alex Salman
+**A project by Anthony Liu and Alex Salman**
 
 Last modified 05/03/2021
 
@@ -45,5 +45,14 @@ Running the program:
 ``` bash
 python3 main.py
 ```
+
+----
+## FAQ
+
+_Q: Why this is an IR project instead of an hodgepodge of algorithms?_
+
+A: There are 4 components of an Information Retrieval system, "acquisition", "representation", "file organization", and "query". Although we are working primarily on string matching, this process is essential for the "query" component, where a query like "how many time XXX dataset was mentioned" is passed in. Therefore, we must devise a robust platform where documents are efficiently processed and stored, and where queries like this would receive accurate feedbacks.
+
+
 
 
