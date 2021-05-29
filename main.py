@@ -31,7 +31,7 @@ def main():
     
     # PART 01: Preprocess the documents
     
-    train_data_path = "dataset/train/"
+    train_data_path = "dataset/train"
     train_list = os.listdir(train_data_path)
     train_list = train_list[:DATA_LIMIT] # TEMP
     total_train_count = len(train_list)
