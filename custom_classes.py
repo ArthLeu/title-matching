@@ -17,10 +17,12 @@ class PosMap():
     
     def plot(self, idx=-1, top=10):
         m = self.map[idx]
-        sorted_map = sorted(m.items(), key = lambda x: x[1], reverse=True)[:10]
-        X = [x[0] for x in sorted_map]
-        Y = [x[1] for x in sorted_map]
+        sorted_map = sorted(m.items(), key = lambda x: x[1], reverse=True)
+        X = [x[0] for x in sorted_map][:top]
+        Y = np.array([x[1] for x in sorted_map])
         y_pos = np.arange(len(X))
+        y_sum = np.sum(Y)
+        Y = (Y / y_sum)[:top]
         f = plt.figure()
         f.set_figwidth(12)
 
@@ -29,6 +31,8 @@ class PosMap():
         plt.ylabel('Occurence')
         plt.title('Words')
         plt.show()
+
+        return y_sum
 
     
     def __getitem__(self, key):
