@@ -6,26 +6,34 @@ def search_sentences(label, text, pre=5, post=4):
     pos = KMP(label, text)
     m = len(label)
     n = len(text)
+    pre += 1
     activations, deactivations = [], []
+    terminators = [" ", "\n"]
 
     for p in pos:
         beg = p
         c = 0
         while beg >= 0:
-            if text[beg] == " ":
+            if text[beg] == ".":
+                c = pre
+            elif text[beg] in terminators:
                 c += 1
+
             if c == pre:
                 beg += 1
-                c = 0
                 break
             else:
                 beg -= 1
         
         end = p+len(label)+1
+        c = 0
 
         while end < n:
-            if text[end] == " ":
+            if text[end] == ".":
+                c = post
+            elif text[end] in terminators:
                 c += 1
+            
             if c == post:
                 break
             else:
