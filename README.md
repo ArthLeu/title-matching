@@ -5,11 +5,11 @@
 Last modified 05/03/2021
 
 ## TODO:
-1. Enable searching with multiple labels (exact match)
-2. Finish `eval.py` with the given evaluation algorithm
-3. Analyze evaluation results with plots (false positive, false negative)
-4. ~Modify `main.py` so that it can run on Kaggle~ _do we submit results in .csv?_
-5. Optimization on computing time
+1. ~Enable searching with multiple labels (exact match)~
+2. ~Finish `eval.py` with the given evaluation algorithm~
+3. ~Analyze evaluation results with plots (false positive, false negative)~
+4. ~Modify `main.py` so that it can run on Kaggle _do we submit results in .csv?_~
+5. ~Optimization on computing time~
 6. Allow approximate search (rough match) (neural network may be required)
 7. Optimization on computing time (modern IR methods or term indexing maybe?)
 
