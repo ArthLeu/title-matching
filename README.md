@@ -10,8 +10,9 @@ Last modified 05/03/2021
 3. ~Analyze evaluation results with plots (false positive, false negative)~
 4. ~Modify `main.py` so that it can run on Kaggle _do we submit results in .csv?_~
 5. ~Optimization on computing time~
-6. Allow approximate search (rough match) (neural network may be required)
-7. Optimization on computing time (modern IR methods or term indexing maybe?)
+6. Approximations to labels in training set (neural network may be required)
+7. Detections of labels not matching with any in the training set (heuristics)
+8. Optimization on computing time (modern IR methods or term indexing maybe?)
 
 ## Brainstorming Canvas
 [Link to Google Docs](https://docs.google.com/document/d/1zjpbcx4N6viEDxbHI9Jovx2x2zH4h5xOCiHbn1oLfGM/edit)
