@@ -113,11 +113,44 @@ def computeLPSArray(pat, M, lps):
 
 
 
-def consecutive_caps(text):
-    pass
+def longest_consecutive_caps(sentence):
+    """ returns the longest capitalized phrase in a sentence """
+    cc = 0
+    max_cc = 0
+    beg = 0
+    wordlist = sentence.split()
+    max_list = []
+    if wordlist == []: 
+        return (0, 0, "")
+
+    for i, word in enumerate(wordlist):
+        if word[0].isupper():
+            if cc == 0: beg = i
+            cc += 1
+        else:
+            if cc > max_cc:
+                max_cc = cc
+                max_list = wordlist[beg:i]
+            cc = 0
+    
+    if cc > max_cc:
+        max_cc = cc
+        max_list = wordlist[beg:]
+    
+    #assert(len(max_list) == max_cc)
+    max_words = " ".join(max_list)
+    rate = max_cc / len(wordlist)
+    #print(max_cc, max_words)
+    return (max_cc, rate, max_words)
+            
+
+
 
 
 if __name__ == "__main__":
     txt = "ABABDABACDABABCABAB"
     pat = "ABAB"
     KMP(pat, txt)
+
+    txt = "The quick brown fox jumps over The Lazy Dog"
+    longest_consecutive_caps(txt)
