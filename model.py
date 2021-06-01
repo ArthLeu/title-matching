@@ -150,7 +150,7 @@ def longest_consecutive_caps(sentence):
 if __name__ == "__main__":
     txt = "ABABDABACDABABCABAB"
     pat = "ABAB"
-    KMP(pat, txt)
+    print(KMP(pat, txt))
 
     txt = "The quick brown fox jumps over The Lazy Dog"
     longest_consecutive_caps(txt)
