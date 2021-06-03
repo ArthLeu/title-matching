@@ -1,32 +1,29 @@
 {
   "lang":"en",
-  "name":"pipeline",
+  "name":"model",
   "version":"0.0.0",
-  "spacy_version":">=3.0.6,<3.1.0",
+  "spacy_version":">=2.3.5",
   "description":"",
   "author":"",
   "email":"",
   "url":"",
   "license":"",
-  "spacy_git_version":"df3444421",
+  "spacy_git_version":"1d4b1dea2",
   "vectors":{
     "width":0,
     "vectors":0,
     "keys":0,
-    "name":null
+    "name":"spacy_pretrained_vectors"
+  },
+  "pipeline":[
+    "ner"
+  ],
+  "factories":{
+    "ner":"ner"
   },
   "labels":{
     "ner":[
       "DATASET"
     ]
-  },
-  "pipeline":[
-    "ner"
-  ],
-  "components":[
-    "ner"
-  ],
-  "disabled":[
-
-  ]
+  }
 }
