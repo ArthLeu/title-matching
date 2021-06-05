@@ -141,3 +141,5 @@ dataset/test/*
 submission.csv
 
 .DS_Store
+
+test/*
