@@ -80,4 +80,9 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import csv
+    with open("dataset/gvnt_800.csv") as f:
+        reader = csv.reader(f)
+        my_list = list(reader)
+    a = [row[0] for row in my_list]
+    print(a)
