@@ -1,21 +1,12 @@
-# Title Matcher
+# Title Matcher - CSE 272 Final Project
 
-**A project by Anthony Liu and Alex Salman**
+**A project by [Anthony Liu](mailto:hliu35@ucsc.edu) and [Alex Salman](mailto:aalsalma@ucsc.edu)**
 
-Last modified 05/03/2021
+The primary task of this program is to retrieve all the names of datasets in given documents
 
-## TODO:
-1. Exact Match
-2. spaCy NER
-3. *Maybe* Fuzzy Match again? If it could be faster?
-4. Hyperparameter Tunning
-5. Training a best possible model.
+Last modified 06/08/2021
 
-## Brainstorming Canvas
-[Link to Google Docs](https://docs.google.com/document/d/1zjpbcx4N6viEDxbHI9Jovx2x2zH4h5xOCiHbn1oLfGM/edit)
-
-
-## Project Descriptions
+## Competition Descriptions
 [Kaggle competition main page](https://www.kaggle.com/c/coleridgeinitiative-show-us-the-data)
 
 [Dataset download page](https://www.kaggle.com/c/coleridgeinitiative-show-us-the-data/data)
@@ -23,7 +14,18 @@ Last modified 05/03/2021
 [Program output guide and sample](https://www.kaggle.com/c/coleridgeinitiative-show-us-the-data/overview/evaluation)
 
 
-## Useful Scripts
+## Features as of 06/09/2021
+1. Exact Match
+2. spaCy NER
+3. ~Fuzzy Match~ (disabled due to slow performance)
+4. Custom Hyperparamters
+5. Optional Training During Each Run
+
+## Our Design Thoughts (Brainstorming Canvas)
+[Link to Google Docs](https://docs.google.com/document/d/1zjpbcx4N6viEDxbHI9Jovx2x2zH4h5xOCiHbn1oLfGM/edit)
+
+
+## Useful Shell Commands
 Installing required packages
 ``` bash
 pip3 install -r requirements.txt
@@ -39,12 +41,12 @@ Store test data at location:
 dataset/test/
 ```
 
-Running the program:
-``` bash
-python3 main.py
+Running the program: use `jpyter notebook` to run
+``` 
+main.ipynb
 ```
 
-----
+
 ## FAQ
 
 _Q: Why this is an IR project instead of an hodgepodge of algorithms?_
